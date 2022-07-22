@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+  Adds a setting for managing Botbucket Branch restriction to Bitbucket Branch Source plugin.
+</div>
