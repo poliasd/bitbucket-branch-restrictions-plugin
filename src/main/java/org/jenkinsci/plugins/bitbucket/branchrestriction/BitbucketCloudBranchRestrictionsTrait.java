@@ -194,7 +194,7 @@ public class BitbucketCloudBranchRestrictionsTrait extends SCMSourceTrait {
                     .header("Authorization", authenticationHeader)
                     .version(HttpClient.Version.HTTP_1_1)
                     .POST(HttpRequest.BodyPublishers.ofString(payload))
-                    .timeout(Duration.of(3, SECONDS))
+                    .timeout(Duration.of(30, SECONDS))
                     .build();
             response = client.sendAsync(request, HttpResponse.BodyHandlers.ofString()).get();
         } catch (Exception e) {
@@ -221,7 +221,7 @@ public class BitbucketCloudBranchRestrictionsTrait extends SCMSourceTrait {
                     .header("Authorization", authenticationHeader)
                     .version(HttpClient.Version.HTTP_1_1)
                     .PUT(HttpRequest.BodyPublishers.ofString(payload))
-                    .timeout(Duration.of(3, SECONDS))
+                    .timeout(Duration.of(30, SECONDS))
                     .build();
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (Exception e) {
