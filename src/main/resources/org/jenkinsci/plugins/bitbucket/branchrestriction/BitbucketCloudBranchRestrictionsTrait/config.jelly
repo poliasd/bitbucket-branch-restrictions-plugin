@@ -1,0 +1,34 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+  <f:block>
+    <table>
+      <f:entry title="Branch (by name or pattern)" field="branchPermissions">
+        <f:textbox default="master"/>
+      </f:entry>
+      <f:entry title="Users who can merge via pull request" field="prAccessUsers">
+        <f:textbox default="Everybody"/>
+      </f:entry>
+      <f:entry title="Groups who can merge via pull request" field="prAccessGroups">
+        <f:textbox default="Everybody"/>
+      </f:entry>
+      <f:radio name="generalApproval" title="Check for General Reviewers Approval(s)" inline="true">
+        <f:entry title="Number of approval(s)" field="reviewersGeneralId">
+          <f:select default="1"/>
+        </f:entry>
+      </f:radio>
+      <f:radio name="defaultReviewersApproval" title="Check for Default Reviewers Approval(s)" inline="true">
+        <f:entry title="Number of approval(s)" field="reviewersDefaultId">
+          <f:select default="1"/>
+        </f:entry>
+      </f:radio>
+      <f:radio name="successfulBuilds" title="Check the last commit for successful build(s) and no failed builds" inline="true">
+        <f:entry title="Number of successful build(s)" field="successfulBuildsId">
+          <f:select default="1"/>
+        </f:entry>
+      </f:radio>
+    </table>
+  </f:block>
+
+</j:jelly>
