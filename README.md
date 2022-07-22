@@ -23,8 +23,3 @@ The configuration of the branch permissions will open and form here you can:
 * The number of last successful builds
   ![Settings: Bitbucket cloud branch permissions](images/configuration-branch-permissions.png "Settings: Bitbucket cloud branch permissions")
 
-
-
-
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
-mvn hpi:run
